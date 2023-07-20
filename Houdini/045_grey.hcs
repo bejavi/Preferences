@@ -1,0 +1,788 @@
+Scheme:	045_grey
+
+#include "$HFS/houdini/config/basic_colors.inc"
+
+// Color Palette
+#define BACKGROUND	GREY(0.45)
+#define DISABLED	GREY(0.32)
+#define TEXT	GREY(0.1)
+#define TEXT_HIGHLIGHT	GREY(0.5)
+
+#define FIELD GREY(0.4)
+
+#define HIGHLIGHT	GREY(0.6)
+
+#define SHADOW	GREY(0.3)
+
+#define GRADIENT_HIGH	BACKGROUND
+#define GRADIENT_LOW	BACKGROUND
+
+#define PRESSED_TEXT	TEXT
+
+#define BORDER	GREY(0.2)
+
+#define HELP_BG	1 1 0.88
+#define HELP_F1_BG	0.88 0.97 1
+
+#define SELECTION	#38 8C 8C
+#define SELECTED_TEXT	RED
+#define DISABLED_TEXT	GREY(0.3)
+
+#define ERROR	RED
+
+// Color correction for the icons --------------------------------------------
+
+IconBrightness:	0.85
+IconContrast:	1
+IconGamma:	1
+IconSaturation:	0.9
+
+// New UI Resources ----------------------------------------------------------
+
+BackColor:	BACKGROUND
+
+ButtonGradHi:	BACKGROUND
+ButtonGradLow:	BACKGROUND
+// Low end of gradient on non-selected tabs
+ButtonNonActiveGradLow:	BACKGROUND
+
+// These are used for tons of borders all over the place, but
+// NOT for buttons >:-(
+ButtonShadowLight:	BORDER
+ButtonShadowMed:	SHADOW
+ButtonShadowMedDark:	SHADOW
+ButtonShadowDark:	BORDER
+ButtonShadow:	BORDER
+
+ToolbarBevelLight:	HIGHLIGHT
+ToolbarBevelDark:	SHADOW
+// Top/left end of gradient
+ToolbarFlatGradHi:	BACKGROUND
+// Bottom/right end of gradient
+ToolbarFlatGradLo:	BACKGROUND
+
+DialogBlendBG:	RED
+
+ButtonText:	TEXT
+ButtonPressedText:	PRESSED_TEXT
+ButtonPressedGradHi:	HIGHLIGHT
+ButtonPressedGradLow:	HIGHLIGHT
+
+ButtonMenuArrowHi:	BACKGROUND
+ButtonMenuArrowLow:	BACKGROUND
+ButtonMenuArrow:	SHADOW
+
+ButtonArrow:	TEXT
+ButtonArrowDisabled:	HIGHLIGHT
+ButtonArrowPressed:	PRESSED_TEXT
+
+MenuBG:	BACKGROUND
+MenuText:	TEXT
+MenuTextDisabled:	DISABLED_TEXT
+MenuTextHotkey:	SHADOW
+MenuHighlight:	HIGHLIGHT
+MenuShadow:	SHADOW
+MenuTextSelected:	TEXT
+MenuSelectedBG:	SELECTION
+MenuTitleBG:	BACKGROUND
+InvertedMenuBackground:		HIGHLIGHT
+                                                
+// Colors for Ramp (Float) parameters.
+RampBG:			BACKGROUND
+RampFG:			HIGHLIGHT
+RampBGDisabled:		SHADOW
+RampFGDisabled:		BACKGROUND
+RampGrid:		SHADOW
+RampCurve:		SHADOW
+RampCurveDisabled:	SHADOW
+RampKeyBG:		SHADOW
+RampKeyFG:		HIGHLIGHT
+RampKeyDisabled:	SHADOW
+RampKeyHoverBG:		SHADOW
+RampKeyHoverFG:		SHADOW
+RampMarkerHover:	SHADOW
+
+Separator:	BORDER
+                                                
+CheckBG:	FIELD
+CheckLocated:	SELECTION
+CheckColor:	TEXT
+                                                
+RadioBG:	BACKGROUND
+RadioBorder:	SHADOW
+RadioDot:	SELECTION
+RadioDotHighlight:	HIGHLIGHT
+
+TextboxBG:	FIELD
+TextboxInvalidBG:	0.95 0.56 0.56
+TextboxBorderPrimary:	BORDER
+TextboxBorderHighlight:	BACKGROUND
+TextboxError:	ERROR
+TextboxGutter:	GREY(0.35)
+TextboxDropMarker: #00 00 66
+
+
+TextboxFeedbackFG:	TEXT
+TextboxFeedbackBG:	BACKGROUND
+SelectedTextFG:	TEXT
+SelectedTextBG:	HIGHLIGHT
+
+SliderTopBorder:	BORDER
+SliderBottomBorder:	BORDER
+SliderAdvancedBevel:	BACKGROUND
+SliderAdvancedGroove:	BACKGROUND
+SliderRemainingBevel:	SHADOW
+SliderRemainingGroove:	SHADOW
+SliderTick:	BORDER
+SliderRangeBrackets:	SHADOW
+
+SliderThumbTopBevel:	HIGHLIGHT
+SliderThumbBottomBevel:	SHADOW
+SliderThumbTopBorder:	BORDER
+SliderThumbBottomBorder:	BORDER
+SliderThumbRangeArrow:	SHADOW
+
+LadderBG:	FIELD
+LadderText:	TEXT
+LadderHighlight:	SELECTION
+LadderOutline:	SHADOW
+LadderShadow:	SHADOW
+
+ScrollbarUpperBorder:	BORDER
+ScrollbarBottomBorder:	BORDER
+ScrollbarWell:	FIELD
+ScrollbarWellShadow1:	FIELD
+ScrollbarWellShadow2:	FIELD
+ScrollbarWellShadow3:	FIELD
+ScrollbarWellShadowBlend12:	FIELD
+ScrollbarWellShadowBlend13:	FIELD
+ScrollbarWellShadowBlend22:	FIELD
+ScrollbarWellShadowBlend23:	FIELD
+ScrollbarWellShadowBlend32:	FIELD
+ScrollbarWellShadowBlend33:	FIELD
+
+ScrollbarThumbTopBorder:	BORDER
+ScrollbarThumbBottomBorder:	BORDER
+ScrollbarThumbBevel:	BACKGROUND
+ScrollbarThumbGrippyBase:	SHADOW
+ScrollbarThumbGrippyEdge:	SHADOW
+
+ScrollbarButtonTopBorder:	BORDER
+ScrollbarButtonBottomBorder:	BORDER
+ScrollbarButtonBetweenBorder:	SHADOW
+ScrollbarButtonBevel:	BACKGROUND
+ScrollbarButtonArrow:	TEXT
+
+ScrollArrow:	TEXT
+ScrollArrowSelected:	TEXT
+ScrollArrowDisabled:	DISABLED
+
+ProgressMeterPercentLabelLeft:	GREY(0)
+ProgressMeterPercentLabelRight:	WHITE
+ProgressMeterTopBorder:	SHADOW
+ProgressMeterBottomBorder:	SHADOW
+ProgressMeterWellGradHi:	SHADOW
+ProgressMeterWellGradLo:	SHADOW
+ProgressMeterBevelTop:	HIGHLIGHT
+ProgressMeterBevelBottom:	SHADOW
+ProgressMeterGradHi:	SELECTION
+ProgressMeterGradLo:	SELECTION
+ProgressMeterText:	TEXT
+
+ListShadow:	SHADOW
+ListHighlight:	HIGHLIGHT
+ListBorder:	BORDER
+// ListBG does not seem to be used anywhere
+ListBG:	BACKGROUND
+ListEntry1:	FIELD
+ListEntry2:	FIELD
+ListEntrySelected:	SELECTION
+ListTitleShadow:	SHADOW
+ListTitleHighlight:	HIGHLIGHT
+ListTitleGradHi:	BACKGROUND
+ListTitleGradLow:	BACKGROUND
+ListTitleHighlightGradHi:	SELECTION
+ListTitleHighlightGradLow:	SELECTION
+ListText:		TEXT
+ListAltText:		SHADOW
+
+HotkeyMgrUnboundActionFG:	SHADOW
+
+// Divider line between spreadsheet columns
+SSBorder:	SHADOW
+
+GroupBorder:	BORDER
+
+InfoBG:	HELP_BG
+InfoText:	TEXT
+
+PopupHelpBG:		HELP_BG
+PopupHelpFG:		grey18
+PopupHelpHotkeyFG:	SHADOW
+PopupExtraHelpFG:	TEXT
+PopupExtraHelpBG:	HELP_F1_BG
+
+ShelfGradHi:	BACKGROUND
+ShelfGradMidHi:	BACKGROUND
+ShelfGradMidLow:	BACKGROUND
+ShelfGradLow:	BACKGROUND
+
+// This does not appear to be used
+ShelfBG:	BORDER
+
+ShelfEmptyBG:	BORDER
+ShelfTabActiveHi:	HIGHLIGHT
+ShelfTabActiveLow:	BACKGROUND
+ShelfTabInactiveHi:	DISABLED
+ShelfTabInactiveLow:	DISABLED
+
+PaneTabActiveHi:	HIGHLIGHT
+PaneTabActiveLow:	BACKGROUND
+PaneTabInactiveHi:	DISABLED
+PaneTabInactiveLow:	DISABLED
+PaneTabEdges:	BORDER
+PaneEmptyBG:	BORDER
+PaneBorder:	BORDER
+PaneHeaderGradHi:	BACKGROUND
+PaneHeaderGradLow:	BACKGROUND
+PaneTabShadow:	BORDER
+
+PathGadgetArrow1:	BACKGROUND
+PathGadgetArrow2:	SHADOW
+PathGadgetArrow3:	HIGHLIGHT
+//
+PathGadgetArrow1Selected:	BACKGROUND
+PathGadgetArrow2Selected:	SHADOW
+PathGadgetArrow3Selected:	HIGHLIGHT
+//
+PathGadgetPrimaryBorder:	BORDER
+PathGadgetSecondaryBorder:	SHADOW
+//
+PathGadgetPrimaryBorderSelected:	SHADOW
+PathGadgetSecondaryBorderSelected: 	SHADOW
+//
+PathGadgetBevel:	HIGHLIGHT
+PathGadgetBevelSelected:	BORDER
+//
+PathGadgetText:	TEXT
+//
+PathGadgetGradHi:	BACKGROUND
+PathGadgetGradLow:	BACKGROUND
+//
+PathGadgetGradHiSelected:	HIGHLIGHT
+PathGadgetGradLowSelected:	HIGHLIGHT
+//
+PathGadgetHistoryButtonBevel:	HIGHLIGHT
+PathGadgetHistoryButtonBevelSelected:	SHADOW
+
+ViewportBorder:	BACKGROUND
+ViewportDividers:	BACKGROUND
+
+ViewportInspectBox:	GREY(0.8)
+ViewportInspectBorder:	GREY(0.3)
+ViewportInspectText:	BLACK
+
+TreeNodeBG:	FIELD
+TreeNodeAlternateBG:	DISABLED
+TreeNodeSelectedBG:	SELECTION
+TreeNodeSelectedFG:	SELECTED_TEXT
+TreeNodeReservedParmFG:	SHADOW
+TreeLine:	BORDER
+
+PerformanceGood: 0.45 0.82 0.08
+PerformanceBad: 0.8 0 0
+PerformanceWarn: #F8 74 31
+
+NetworkPerformanceGood: #95 A0 84
+NetworkPerformanceBad: #D4 AA 9E 
+NetworkPerformanceWarn: #B0 A9 57
+
+NodeConnectionDefaultBG:	SHADOW
+NodeConnectionTextBG:	HIGHLIGHT
+NodeConnectionGlow:	WHITE
+NodeConnectionArrowLight:	HIGHLIGHT
+NodeConnectionArrowDark:	SHADOW
+NodeConnectionBevel:	HIGHLIGHT
+NodeConnectionTopBorder:	BORDER
+NodeConnectionBottomBorder:	BORDER
+
+NodeButtonGrad:	HIGHLIGHT
+// NodeButtonSelectedGrad does not seem to be used anymore.
+NodeButtonSelectedGrad:	BACKGROUND
+NodeButtonBevel:	BACKGROUND
+NodeButtonBevelSelected:	BACKGROUND
+NodeSeparator:	SHADOW
+NodeSeparatorEnabled:	SHADOW
+NodeError:	ERROR
+NodeWarningBG:	BLACK
+NodeWarningFG:	1.0 0.87 0
+NodeDefaultBG:	BACKGROUND
+NodeHighlight:	SELECTION
+NodeDebugFG:			0.741 0.988 1
+
+NodeTemplateFlag:	#FF 66 FF
+NodeSelectableTemplateFlag:	#CC 33 CC
+NodeBypassFlag:	1.0 1.0 0
+NodeRenderFlag:	0.666 0.5 1.0
+NodeDisplayFlag:	#00 66 CC
+NodeDisplayAndRenderFlag:	0 0.68 0.94
+NodeOutputFlag:			0.75 0.4 0.0
+NodeSelectableFlag:	#66 CC 00
+NodeExportFlag:	0.75 0.4 0.0
+NodeHiddenFlag:			0.58 0.55 0.43
+NodeAudioFlag:	0.0 0.5 0.5
+NodeThumbnailFlag:	0.35 0.6 0.2
+NodeLockFlag:	#FF 33 00
+NodeSoftLockFlag:	#C4 E3 61 
+NodeLoadedWithUnloadFlagOn:	1.0 0.0 1.0
+NodeDebugFlag:	0.741 0.988 1
+
+NetworkSelection:	1.00 1.00 0.00
+NetworkCurrent:	1.00 0.85 0.00
+NetworkCurrentNonSelected:	GREY(0.4)
+NetworkBackground:	BACKGROUND
+NetworkDisplayHighlight:	0.4180 0.5469 0.6758
+NetworkRenderHighlight:	#9E 8E AE
+NetworkOutputHighlight:		0.75 0.4 0.0
+NetworkTemplateHighlight:	#FF 66 FF
+NetworkOverviewDragger:	HIGHLIGHT
+NetworkTimeDependent:	0.0 1.0 0.0
+
+NetworkGrid:	GREY(0.4)
+
+NetworkWireNormal:	SHADOW
+NetworkWireActive:	SELECTION
+NetworkWireActiveLight:	SELECTION
+NetworkWireHighlight:	HIGHLIGHT
+NetworkWireShadow:	SHADOW
+NetworkWireExtraNormal:	0.996 0.75 0.8
+NetworkWireExtraActive:	0.3 0.0 0.0
+NetworkWireExtraActiveLight:	0.8 0.0 0.0
+NetworkWireIKNormal:	0.72 0.31 0.72
+NetworkWireIKActive:	0.0 0.0 0.3
+NetworkWireIKActiveLight:	0.0 0.0 0.8
+NetworkWireOutputOverrideNormal:	1.0 1.0 1.0
+NetworkWireOutputOverrideHighlight:	0.0 1.0 0.0
+NetworkWireTimeDepNormal:	0.0 1.0 0.0 
+
+StatusBarMessageFG:	TEXT
+StatusBarMessageBG:	BACKGROUND
+//
+StatusBarPromptFG:	WHITE
+StatusBarPromptBG:	0.3 0.4 0.9
+//
+StatusBarWarningFG:	WHITE
+StatusBarWarningBG:	0.85 0.25 0.0
+//
+StatusBarErrorFG:	WHITE
+StatusBarErrorBG:	1.0 0.0 0.0
+
+DopeSheetCurrentFrameFG:	HIGHLIGHT
+DopeSheetCurrentFrameBG:	BORDER
+DopeSheetIndicatorLine:	RED
+DopeSheetKnob:	TEXT
+DopeSheetKnobPendingKey:	SELECTION
+DopeSheetKnobOutlier:	1 1 0
+DopeSheetKeyActive:	0.0 1.0 0
+DopeSheetKeyPartial:	0 1 0
+DopeSheetKeyPending:	SELECTION
+DopeSheetKeyMuted:	DISABLED
+DopeSheetKeyOverlay:	1 0 0
+DopeSheetKeyDisabled:	0.5 0 1
+DopeSheetOutsideRangeBG: DISABLED
+DopeSheetSimulation:		0 0.5 1
+DopeSheetSimulationReset:	1 0.5 0
+DopeSheetSimulationPlaying:     0.59 0.48 0.7
+DopeSheetTimeline:	BACKGROUND
+DopeSheetTimelineAudio:	BACKGROUND
+DopeSheetTickLarge:	TEXT
+DopeSheetTickSmall:	TEXT
+DopeSheetTickSmallAudio:	TEXT
+DopeSheetTickNumber:	TEXT
+DopeSheetRangeNumber:	TEXT
+DopeSheetRowDisabled:	DISABLED
+DopeSheetRowLight:	BACKGROUND
+DopeSheetRowDark:	SHADOW
+DopeSheetColLine:	BORDER
+DopeSheetRowLine:	BORDER
+DopeSheetViewLock:	1 1 0.5
+DopeSheetSelection:	1 1 0
+DopeSheetSelectionHover:	1 1 0.5
+DopeSheetSelectionActive:	1 1 0.5
+DopeSheetSelectionInactive:	1 1 0
+DopeSheetSelectionInactiveLock:	1 0 1
+DopeSheetSelectionText:	TEXT
+DopeSheetOverwriteHover:	1 0 0
+DopeSheetOverwriteActive:	0.7 0 0
+DopeSheetOverwriteInactive:	0.9 0 0
+DopeSheetSpreadSheetText:	TEXT
+DopeSheetSpreadSheetDisabled:	DISABLED
+DopeSheetRippleTool:	1 1 0
+
+BorderLight:		BORDER
+BorderDark:		BORDER
+
+AssetBannerBackground:		GREY(0.12)
+AssetUpdateStatusBackground:	0.19 0.28 0.38
+AssetUpdateStatusText:		WHITE
+OrboltSplashscreenProgressbar:	0.19 0.28 0.38
+
+MplayInspectBox:	GREY(0.8)
+MplayInspectBorder:	GREY(0.3)
+MplayInspectText:	BLACK
+MplayColorCorrectWarn:  1 1 0.75 
+//
+// The following colors are used on the top control panels
+// within the desktop panes to indicate the current data type.
+// These are Tints, not colors, so beware of modifying the saturation
+// or brightness.
+//
+ObjectColor:	HSV 210 0.05 0.95
+SopColor:	HSV 100 0.05 0.95
+DopColor:	HSV 0 0.05 0.95
+PopNetColor:	HSV 170 0.05 0.95
+PopColor:	HSV 170 0.05 0.95
+ShopColor:	HSV 340 0.05 0.95
+VopNetColor:	HSV 260 0.05 0.95
+VopColor:	HSV 260 0.05 0.95
+ChopNetColor:	HSV 60 0.05 0.95
+ChopColor:	HSV 60 0.05 0.95
+CopNet2Color:	HSV 40 0.05 0.95 
+Cop2Color:	HSV 40 0.05 0.95
+OutputColor:	HSV 20 0.05 0.95
+RootColor:	HSV 0 0 1
+
+// Channel Editor Colors ---------------------------------------------------
+//
+// These colors for for graphical elements in the Channel Editor
+//
+ChannelEditorBackground:	    BORDER	    // Background of the graph same as network color
+ChannelEditorTimebar:		    RED	    // Color of timebar to be xored on top
+ChannelEditorGridLine:		    SHADOW	    // Graph grid line
+ChannelEditorGridDashedLine:	    SHADOW	    // Graph grid dashed line
+ChannelEditorHandleDefault:	    BACKGROUND	    // Handles
+ChannelEditorHandleSelected:	    SELECTION  // Selected handle
+ChannelEditorHandleLocated:	    HIGHLIGHT  // Handle when mouse is on top
+ChannelEditorHandleSelectedLocated: 0.50 1.00 0.00  // Selected handle when mouse is on top
+ChannelEditorTimeText:		    BORDER	    // Color of the bottom time text
+
+// Channel Colors ----------------------------------------------------------
+//
+// These colors are for coloring channels in various places in Houdini
+// (eg. the Channel Editor and Channel List panes).
+//
+// They are currently divided into 4 groups:
+//   - red colors:   for channel names ending in x or r
+//   - green colors: for channel names ending in y or g
+//   - blue colors:  for channel names ending in z or b
+//   - other colors: for channel names not ending in letters mentioned above
+// The channel names ending r, g, or b always use the first entry of each of
+// their respective color groups.
+//
+// Each color group contains an arbitrary number of similar colors, uniquely
+// determined by their numeric suffix.  When determining the color of a
+// particular channel, both its node and channel name is used. For example,
+// point1/tx and point1/vx will be both be reds of different hues, which in turn
+// will also differ from point2/tx and point2/vx.
+//
+ChannelColorRed1:   hsv   0.0 1.0 1.00  // red
+ChannelColorRed2:   hsv 320.0 1.0 1.00  // before red
+ChannelColorRed3:   hsv 340.0 1.0 1.00
+ChannelColorRed4:   hsv  20.0 1.0 1.00  // after red
+ChannelColorRed5:   hsv  40.0 1.0 1.00
+ChannelColorGreen1: hsv 120.0 1.0 1.00  // green
+ChannelColorGreen2: hsv  80.0 1.0 1.00  // before green
+ChannelColorGreen3: hsv 100.0 1.0 1.00
+ChannelColorGreen4: hsv 140.0 1.0 1.00  // after green
+ChannelColorGreen5: hsv 160.0 1.0 1.00
+ChannelColorBlue1:  hsv 240.0 1.0 1.00  // blue
+ChannelColorBlue2:  hsv 200.0 1.0 1.00  // before blue
+ChannelColorBlue3:  hsv 220.0 1.0 1.00
+ChannelColorBlue4:  hsv 260.0 1.0 1.00  // after blue
+ChannelColorBlue5:  hsv 280.0 1.0 1.00
+ChannelColorOther1: hsv  60.0 1.0 1.00  // Yellow
+ChannelColorOther2: hsv 180.0 1.0 1.00  // Aqua
+ChannelColorOther3: hsv 300.0 1.0 1.00  // Purple
+ChannelColorOther4: hsv  60.0 1.0 0.75  // Dark Yellow
+ChannelColorOther5: hsv 180.0 1.0 0.75  // Dark Aqua
+ChannelColorOther6: hsv 300.0 1.0 0.75  // Dark Purple
+
+// Geometry group colors ---------------------------------------------------
+//
+// These two colors specify opposing corners of a quadrilateral in HSV space.
+// Colors for geometry groups are sampled from within this quad.
+//
+GeoGroupColor1: hsv  90.0 0.3 1.0
+GeoGroupColor2: hsv 330.0 0.6 1.0
+
+// Syntax highlighting in editors and input boxes
+ParmSyntaxPlainColor:	TEXT
+ParmSyntaxStringColor:	0.00 1.00 0.00
+ParmSyntaxVarColor:	1.00 1.00 0.00
+ParmSyntaxFuncColor:	0.00 0.00 1.00
+ParmSyntaxKeywordColor:	0.50 0.00 1.00
+ParmSyntaxQuoteColor:	1.00 0.50 0.00
+ParmSyntaxNumberColor:	WHITE
+ParmSyntaxRefColor:	1.00 0.00 1.00
+ParmSyntaxCommentColor:	0.30 0.30 0.00
+ParmSyntaxErrorColor:	RED
+ParmParenMatchColor:	WHITE
+ParmQuoteMatchColor:	WHITE
+ParmMisMatchColor:	#ff 77 77
+
+PreEditUnderlineColor:	1.00 1.00 0.00
+
+
+// Old UI Resources ----------------------------------------------------------
+ForegroundColor:	TEXT
+BackgroundColor:	RED
+TextColor:	TEXT
+PaperColor:	FIELD
+TextHighlightColor:		TEXT_HIGHLIGHT
+
+ButtonColor:	BORDER
+ButtonStripColor:	BACKGROUND
+
+ListTitleColor:	BACKGROUND
+ListEntryColor:	FIELD
+ListEntrySelectedColor:	SELECTION
+
+MenuBarColor:	RED
+MenuColor:	BLUE
+BlueSelectedMenuColor:	#20 20 ff
+
+SliderColor:	RED
+SliderThumbColor:	BACKGROUND
+InputColor:	BACKGROUND
+RadioColor:	BACKGROUND
+
+SelectOnColor:	yellow3
+SelectOffColor:	yellow4
+
+IconBackgroundColor:	BACKGROUND
+IconOutlineColor:	BACKGROUND
+IconShadowColor:	BACKGROUND
+IconLocatedColor:	BACKGROUND
+
+DisabledTextColor:	DISABLED_TEXT
+DisabledTextDropShadowColor:	DISABLED
+PopupHelpBackgroundColor:	SELECTION
+
+// New colors for Popup windows (Ex. Anonymous Usage Stats Window)
+PopupWindowTextColor:   white
+BlueTextLinkColor:      #33 66 BB
+
+// Note: the luminance levels of most of these colors should be similar
+// so that none of them stands out too much and so that the text
+// in the parameter fields will be readable.
+//
+
+// Parameter is locked
+LockedColor:	0.20 0.00 0.00
+// Pending change 
+PendingColor:	0.50 0.50 0.20 //yellow
+// Keyframe
+IsKeyColor:	0.30 0.50 0.30 //green
+// constant() or channel with no keys
+IsSoftKeyColor:	0.20 0.50 0.50 //cyan
+// Channel, not at a key. (Expression)
+IsNotKeyColor:	0.20 0.50 0.50 //cyan
+// Channel is disabled from dopesheet
+DisabledColor:	DISABLED //steel
+// Has "lock()" expression
+ChannelLockedColor:	#c6 c6 c6 //gray
+// Parameter is overridden by chop
+OverrideColor:	0.50 0.30 0.10 //peach
+// Expr language differs from node lang.
+OtherLanguageColor:	0.50 0.20 0.50 //purple
+// Accent for non-default parms
+NonDefAccentColor:	0.00 0.00 0.10
+// Accent for !!ch()!! parms
+ChanRefAccentColor:	0.10 1.00 0.10
+// Accents are this color when disabled
+DisabledAccentColor:	0.40 0.40 0.40
+// Parm color when exluded from take, and auto-take is on.
+AutoTakeExcluded:  	0.30 0.30 0.10
+
+//
+// Parm border colors indicating that the parm has a handle associated with it:
+//
+
+// handle is invisible, probably XCF
+InvisibleHandleColor:	0.70 0.00 0.00
+// handle is visible, eg. xform handle
+VisibleHandleColor:	0.00 0.50 0.50
+// handle is active
+ActiveHandleColor:	1.00 1.00 0.00
+
+//
+// The following are used for the flag buttons in the group and node
+// tiles and listers.
+
+SelectOnColor:	0.75 0.75 0
+SelectOffColor:	0.56 0.56 0
+DisplayOnColor:	0.3 0.5 1
+DisplayOffColor:	0.2 0.3 0.6
+TemplateOnColor:	1 0.5 1
+TemplateOffColor:	0.75 0.37 0.75
+BypassOnColor:	1 0.5 0
+BypassOffColor:	0.5 0.25 0
+SelectableOnColor:	0.6 0.35 0.2
+SelectableOffColor:	0.4 0.2 0.15
+ExposeOnColor:	1 0 0
+ExposeOffColor:	0.6 0 0
+CurrentColor:	0.25 0.85 0.25
+
+SplitBarColor:	GREEN
+
+SplitBarBaseColor:	BORDER
+SplitBarEdgeColor:	SHADOW
+SplitBarLightColor:	BORDER
+SplitBarDarkColor:	BORDER
+SplitBarPaneOutline: 	BORDER
+SplitBarGrippyColor:	SHADOW
+SplitBarHighlight:	SELECTION
+
+
+PlayBarOnColor:	0.05 0.8 0.05
+PlayBarOffColor:	0.25 0.25 0.25
+PlayBarDisabledColor:	0.4 0.4 0.4
+PlayBarResetColor:	1 1 0.0
+PlayBarNoPending:	0 0.8 0
+PlayBarNoPending2:	0 1 0
+PlayBarPending:	0.75 0.75 0.5
+PlayBarPending2:	1 1 0.5
+PlayBarAudioWaveColor:	0.643 0.643 0.643
+PlayBarStartEndFieldBG: FIELD
+
+// The following are used for the indicator colours in the info button
+ErrorFlag:	0.9 0.1 0.1
+WarningFlag:	1 1 0
+MessageFlag:	0.8 0.8 0.8	
+FilteredFlag:	0.6 0.6 0.6
+
+// The NoSaveFlag color is used in the resource managers for .nosave files
+NoSaveFlag:	0.0 0.4 0.1
+
+// The following colors are for the status bar
+MessageColor:	0.0 0.0 0.0
+PromptColor:	0.3 0.4 0.9
+WarningColor:	0.85 0.25 0.0
+ErrorColor:	1.0 0.0 0.0
+
+// The following color is for the SHOP viewer
+ShopViewTitleColor	1.0 1.0 0.0
+
+// The following colors are for Vop input/output labels
+VopInOutVector4Color:		0.7	0.9	0.6
+VopInOutVector4ArrayColor:	0.6	0.7	0.55
+VopInOutVectorColor:		0.5	0.8	0.5
+VopInOutVectorArrayColor:	0.5	0.65	0.5
+VopInOutVector2Color:		0.4	0.7	0.4
+VopInOutVector2ArrayColor:	0.3	0.5	0.3
+VopInOutNormalColor:		0.4	0.4	0.8
+VopInOutColorColor:		0.7	0.5	0.3
+VopInOutFloatColor:		0.5	0.7	0.6
+VopInOutFloatArrayColor:	0.5	0.6	0.55
+VopInOutIntColor:		0.5	0.7	0.8
+VopInOutIntArrayColor:		0.5	0.6	0.65
+VopInOutStringColor:		0.8	0.7	0.6
+VopInOutStringArrayColor:	0.65	0.6	0.55
+VopInOutMatrix2Color:		0.6	0.4	0.8
+VopInOutMatrix2ArrayColor:	0.5	0.4	0.6
+VopInOutMatrix3Color:		0.7	0.5	0.9
+VopInOutMatrix3ArrayColor:	0.6	0.5	0.7
+VopInOutPointColor:		0.7	0.3	0.7
+VopInOutMatrix4Color:		0.7	0.65	0.9
+VopInOutMatrix4ArrayColor:	0.6	0.575	0.7
+VopInOutBsdfColor:		0.9	0.9	0.5
+VopInOutStructColor:		0.3	0.4	0.8
+VopInOutMethodColor:		0.9	0.7	0.1
+VopInOutMultiColor:		0.9	0.9	0.9
+VopErrorColor:			1.0	0.0	0.0
+
+// The colors for SHOP input output labels
+ShopInOutSurfaceColor:	0.9	0.7	0.6
+ShopInOutShadowColor:	0.2	0.2	0.3
+ShopInOutDisplaceColor:	0.6	0.7	0.9
+ShopInOutGeometryColor:	0.7	0.9	0.7
+ShopInOutLightColor:	0.9	0.9	0.6
+ShopInOutFogColor:	0.7	0.7	0.7
+ShopInOutPropertiesColor: 	0.5 	0.8	0.9
+ShopInOutShaderColor:	0.9	0.9	0.9
+ShopInOutImage3dColor:	0.4	0.9	0.7
+ShopInOutImage3dArrayColor:	0.3	0.7	0.6
+
+// The following colors are for Dop input/output labels
+DopInOutObjectColor:	0.65	0.65	0.65
+DopInOutDataColor:	0.50	0.80	0.50
+DopInOutRelDataColor:	0.20	0.60	0.20
+DopInOutSolverColor:	0.7	0.5	0.9
+DopInOutAnyColor:	0.9	0.9	0.9
+
+// The following colors are for simple spreadsheets (ie. tables)
+SSTableBackgroundColor:	0.9	0.9	0.9
+SSTableSelectedColor:	0.125	0.125	1.0
+
+// The following colors are for parameter spreadsheets
+ParmSheetEmptyColor:	BACKGROUND
+ParmSheetHeaderColor:	BACKGROUND
+
+// The following color is used for buttons that simulate a hyper-text link
+HyperTextLinkColor:	0.0	0.0	1.0
+
+// The following colors are used to highlight the names of operators that have
+// a given property (e.g. modified parameters)
+OpNameNoneColor:	0.0	0.0	0.0
+OpNameCommentsColor:	0.0	0.0	1.0
+OpNameAnimatedColor:	0.0	0.45	0.0
+OpNameModifiedColor:	0.7	0.1	0.8
+OpNameChoppedColor:	1.0	0.5	0.0
+OpNameSyncedColor:	0.1	0.1	0.6
+OpNameUnsyncedColor:	0.6	0.1	0.1
+OpNameSubnetColor:	0.2	0.2	0.5
+
+// The following color is used for the text in the parameter title bar that
+// indicates how many nodes are selected
+ParmTitleBarNumSelectedColor:	1.0	1.0	0.0
+
+// The following color is used for the text in the take label to indicate that
+// the auto take mode is enabled
+AutoTakeModeColor:	0.40	0.70	0.40
+
+// These colors are used by the operator type manager.
+OTLUnusedColor:	0.70	0.10	0.10
+OTLOutOfDateColor:	0.70	0.70	0.10
+OTLPreferredColor:	0.20	0.70	0.20
+
+// These colors are used by the simulation tree view.
+SIMAltRepColor:	0.20	0.70	0.20
+SIMObjectColor:	0.00	0.00	0.00
+SIMDataColor:	0.00	0.00	0.00
+SIMRelDataColor:	0.00	0.00	0.00
+SIMRecordColor:	0.00	0.00	0.00
+SIMAffectorsColor:	0.00	0.00	0.00
+SIMGroupsColor:	0.00	0.00	0.00
+SIMEngineColor:	0.00	0.00	0.00
+SIMEngineInterpColor:	0.70	0.70	0.10
+SIMAffectorColor:	0.10	0.10	0.60
+SIMMutualColor:	0.20	0.70	0.20
+SIMAlmostMutualColor:	0.70	0.70	0.10
+
+// These colors are used by the linker tree views.
+LinkerPartialLinkColor:	0.80	0.80	0.80
+
+// The following colors are used by the network editor in list mode
+OpListHeaderBGColor:	BACKGROUND
+OpListSplitterColor:	BORDER
+OpListSelectionBGColor:	SELECTION
+OpListSelectionFGColor:	HIGHLIGHT
+
+// These colors are used by the file dependency dialog
+FileDepAcceptColor:		0.0 0.6 0.0
+FileDepRejectColor:		0.8 0.0 0.0
+
+// Colors for the shaded pick box
+ShadedPickOutline: 	      0.8 0.8 0.8
+ShadedPickInnerLine: 	      0.6 0.6 0.6
+ShadedPickFill:		      0.35 0.35 0.35
